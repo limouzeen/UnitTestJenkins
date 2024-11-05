@@ -13,5 +13,8 @@ class TestIsPalindromeFunction(unittest.TestCase):
         # คำที่ไม่เป็น palindrome
         self.assertFalse(is_palindrome("hello"))
         self.assertFalse(is_palindrome("world"))
+        
+    if __name__ == '__main__':
+    with open('test-results.xml', 'wb') as output:
+        unittest.main(testRunner=xmlrunner.XMLTestRunner(output=output), exit=False)
 
-    unittest.main()
