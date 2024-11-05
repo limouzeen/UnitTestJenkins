@@ -12,9 +12,10 @@ pipeline {
             }
         }
 
-        stage('Check Python Version') {
+        stage('Install Dependencies') {
             steps {
-                bat 'python --version' // ตรวจสอบ version เพื่อให้แน่ใจว่า Jenkins รู้จัก Python
+                // ติดตั้ง xmlrunner ก่อน
+                bat 'python -m pip install xmlrunner'
             }
         }
 
@@ -31,3 +32,4 @@ pipeline {
         }
     }
 }
+
