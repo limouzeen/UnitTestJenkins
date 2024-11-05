@@ -9,12 +9,6 @@ pipeline {
         }
 
 
-        stage('Install Dependencies') {
-            steps {
-                bat 'pip install -r requirements.txt'
-            }
-        }
-
         stage('Run Unit Tests') {
             steps {
                 bat 'python test_my_function.py'
