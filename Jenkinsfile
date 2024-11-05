@@ -27,7 +27,7 @@ pipeline {
     post {
         always {
             // บันทึกผลการทดสอบให้ Jenkins แสดงผล
-            junit 'tests/test-results.xml'
+            junit 'test-results.xml'
         }
     }
 }
