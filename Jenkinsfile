@@ -11,15 +11,15 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                // ติดตั้ง dependencies ถ้ามี
-                sh 'pip install -r requirements.txt'
+                // ติดตั้ง dependencies ด้วยคำสั่ง bat สำหรับ Windows
+                bat 'pip install -r requirements.txt'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
-                // รัน Unit Test
-                sh 'python -m unittest discover -s tests -p "test_my_function.py"'
+                // รัน Unit Test ด้วย pytest และสร้างไฟล์ XML
+                bat 'pytest --junitxml=test-results.xml'
             }
         }
     }
