@@ -6,7 +6,7 @@ class TestIsPalindromeFunction(unittest.TestCase):
     def test_is_palindrome_true(self):
         # คำที่เป็น palindrome
         self.assertTrue(is_palindrome("madam"))
-        self.assertTrue(is_palindrome("hello"))
+        self.assertTrue(is_palindrome("racecar"))
         self.assertTrue(is_palindrome("A man a plan a canal Panama"))
 
     def test_is_palindrome_false(self):
