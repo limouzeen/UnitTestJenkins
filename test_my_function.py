@@ -1,5 +1,5 @@
-# tests/test_my_function.py
 import unittest
+import xmlrunner
 from my_function import is_palindrome
 
 class TestIsPalindromeFunction(unittest.TestCase):
@@ -13,8 +13,9 @@ class TestIsPalindromeFunction(unittest.TestCase):
         # คำที่ไม่เป็น palindrome
         self.assertFalse(is_palindrome("hello"))
         self.assertFalse(is_palindrome("world"))
-        
-    if __name__ == '__main__':
+
+if __name__ == '__main__':
+    # ใช้ xmlrunner ในการสร้างรายงานผลลัพธ์การทดสอบเป็น XML
     with open('test-results.xml', 'wb') as output:
         unittest.main(testRunner=xmlrunner.XMLTestRunner(output=output), exit=False)
 
