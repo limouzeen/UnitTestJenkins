@@ -14,8 +14,8 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                // ติดตั้ง xmlrunner ก่อน
-                bat 'python -m pip install xmlrunner'
+                // ติดตั้ง unittest-xml-reporting แทน xmlrunner
+                bat 'python -m pip install unittest-xml-reporting'
             }
         }
 
@@ -32,4 +32,3 @@ pipeline {
         }
     }
 }
-
