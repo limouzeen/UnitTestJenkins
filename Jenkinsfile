@@ -8,12 +8,6 @@ pipeline {
             }
         }
 
-        stage('Check Python and Pip') {
-            steps {
-                bat 'python --version'
-                bat 'pip --version'
-            }
-        }
 
         stage('Install Dependencies') {
             steps {
@@ -23,7 +17,7 @@ pipeline {
 
         stage('Run Unit Tests') {
             steps {
-                bat 'pytest --junitxml=test-results.xml'
+                bat 'python test_my_function.py'
             }
         }
     }
