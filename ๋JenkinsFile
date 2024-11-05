@@ -19,7 +19,7 @@ pipeline {
         stage('Run Unit Tests') {
             steps {
                 // รัน Unit Test
-                sh 'python -m unittest discover -s tests -p "test_myfunction.py"'
+                sh 'python -m unittest discover -s tests -p "test_my_function.py"'
             }
         }
     }
